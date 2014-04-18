@@ -1,5 +1,7 @@
 require 'sinatra'
+require 'json'
 
 get '/ping' do
-  '{"status": true}'
+  ret_hash = {status: "true"}
+  JSON.generate(ret_hash)
 end
