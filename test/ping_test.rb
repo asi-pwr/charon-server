@@ -1,8 +1,8 @@
-ENV['RACK_ENV'] = 'test'
-
 require './server'
 require 'minitest/autorun'
 require 'rack/test'
+
+ENV['RACK_ENV'] = 'test'
 
 class PingTest < Minitest::Test
   include Rack::Test::Methods
